@@ -13,5 +13,5 @@ type Transformer interface {
 	// Destroy 销毁转换器
 	Destroy()
 	// Handle 处理 Datagram
-	Handle(ctx Context, datagrams []dg.Datagram, chain Chain)
+	Handle(ctx Context, datagrams []dg.Datagram) ([]dg.Datagram, error)
 }
